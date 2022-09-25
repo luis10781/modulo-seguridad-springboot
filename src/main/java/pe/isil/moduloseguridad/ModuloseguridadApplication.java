@@ -47,6 +47,8 @@ public class ModuloseguridadApplication {
 
 		int filasAfectadas = cs.executeUpdate();
 		System.out.println("Filas afectadas: " + filasAfectadas);
+		LeerCandidatos(connection);
+
 	}
 	public static void updateCandidatos(Connection connection) throws Exception {
 		//Crear statement
@@ -65,6 +67,7 @@ public class ModuloseguridadApplication {
 								resultSet.getString("enable") );
 		}
 		System.out.println("Filas afectadas: " + affectedRows);
+		LeerCandidatos(connection);
 	}
 	public static void eliminarCandidato(Connection connection, String lastname) throws Exception{
 
